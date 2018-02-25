@@ -9,7 +9,23 @@ import { Component } from '@angular/core';
     styleUrls: ['./about.component.scss'],
     templateUrl: './about.component.html'
 })
+
 export class AboutComponent {
-    open: Boolean = false;
+
+    pagination = {
+        firstItem: 0,
+        lastItem: 9,
+        totalItems: 100
+    }
+    users = [{
+        id: 1,
+        name : "Foo",
+        creation: new Date(),
+        color: "FFFFFF"
+        }]
+
+    public goToPage(page){
+        alert("Going to page "+page)
+    }
 
 }
